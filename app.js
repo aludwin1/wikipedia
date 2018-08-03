@@ -10,7 +10,7 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: false }));
 app.use('/wiki', wikiRouter)
-app.use('/user', userRouter)
+app.use('/users', userRouter)
 
 const init = async () => {
   await models.User.sync({ force: true })
